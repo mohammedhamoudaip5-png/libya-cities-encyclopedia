@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173d35">
+  <meta name="description" content="موسوعة المدن الليبية — نافذة معرفية للتعريف بتاريخ وجغرافيا وتراث المدن والقرى الليبية.">
+  <title>موسوعة المدن الليبية | إعداد المهندس محمد عبدالمجيد حمودة</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="العودة إلى الرئيسية">
+      <span class="brand-mark" aria-hidden="true">ل</span>
+      <span><strong>موسوعة المدن الليبية</strong><small>ذاكرة المكان وحكاية الإنسان</small></span>
+    </a>
+    <nav class="main-nav" aria-label="التنقل الرئيسي">
+      <a href="#home">الرئيسية</a>
+      <a href="#about">عن الموسوعة</a>
+      <a href="#cities">المدن والقرى</a>
+      <a href="#method">منهجية التوثيق</a>
+    </nav>
+    <a class="header-link" href="#cities">اكتشف المدن <span>←</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-pattern"></div>
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> موسوعة معرفية مفتوحة</p>
+        <h1>ليبيا… مدنٌ<br><em>تحكي تاريخ وطن</em></h1>
+        <p class="hero-text">رحلة للتعرّف إلى المدن والقرى الليبية، وجغرافيتها وتاريخها ومعالمها وتراث أهلها؛ توثيقٌ للمكان وحفظٌ للذاكرة للأجيال القادمة.</p>
+        <div class="hero-actions">
+          <a class="button button-light" href="#cities">ابدأ الاستكشاف <span>←</span></a>
+          <a class="text-link" href="#about">تعرّف على الموسوعة</a>
+        </div>
+        <div class="hero-note"><span class="note-icon">✦</span> معرفة متاحة للجميع، دون تسجيل أو اشتراك</div>
+      </div>
+      <div class="hero-art" aria-label="رسم زخرفي مستوحى من العمارة الليبية">
+        <div class="sun"></div><div class="arch arch-back"></div><div class="arch arch-front"></div>
+        <div class="arch-window"></div><div class="palm palm-one"><i></i><i></i><i></i><i></i><b></b></div>
+        <div class="palm palm-two"><i></i><i></i><i></i><i></i><b></b></div>
+        <div class="ground"></div>
+        <span class="art-caption">من الساحل إلى عمق الصحراء</span>
+      </div>
+    </section>
+
+    <section class="intro section-wrap" id="about">
+      <div class="section-kicker">عن المشروع <span>01</span></div>
+      <div class="intro-grid">
+        <div><h2>لكل مدينة حكاية،<br><em>ولكل حكاية مكان.</em></h2></div>
+        <div class="intro-copy">
+          <p>موسوعة المدن الليبية مشروع معرفي يهدف إلى جمع وتقديم المعلومات عن المدن والقرى الليبية في مكان واحد، بأسلوب واضح ومنظم يساعد القارئ والباحث والمهتم على اكتشاف تنوّع ليبيا وثرائها.</p>
+          <p>تُعرض المعلومات لأغراض المعرفة والتعريف، مع الحرص على التمييز بين الحقائق الموثقة والروايات المحلية التي تحتاج إلى مزيد من التحقق.</p>
+          <div class="signature">إعداد <strong>المهندس محمد عبدالمجيد حمودة</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="discover" id="cities">
+      <div class="section-wrap">
+        <div class="section-heading">
+          <div><div class="section-kicker">بوابة الاستكشاف <span>02</span></div><h2>اكتشف المدن والقرى</h2><p>ابحث عن المكان الذي تريد التعرف إليه.</p></div>
+          <div class="count-box"><strong id="cityCount">0</strong><span>مدن وقرى في الدليل التجريبي</span></div>
+        </div>
+        <div class="search-panel">
+          <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="اكتب اسم مدينة أو قرية…" autocomplete="off"><kbd>بحث</kbd></label>
+          <div class="filter-row" id="regionFilters" aria-label="تصفية حسب المنطقة">
+            <button class="filter-chip active" data-region="all">كل المناطق</button>
+            <button class="filter-chip" data-region="الغرب">غرب ليبيا</button>
+            <button class="filter-chip" data-region="الشرق">شرق ليبيا</button>
+            <button class="filter-chip" data-region="الجنوب">جنوب ليبيا</button>
+            <button class="filter-chip" data-region="الوسط">وسط ليبيا</button>
+          </div>
+        </div>
+        <div class="city-grid" id="cityGrid"></div>
+        <div class="empty-state" id="emptyState" hidden><span>⌕</span><strong>لم نعثر على نتائج</strong><p>جرّب كتابة اسم آخر أو اختر منطقة مختلفة.</p></div>
+        <p class="data-note">هذه نسخة تأسيسية؛ سيُضاف المحتوى الموثق والصور الفوتوغرافية تدريجياً لكل مدينة.</p>
+      </div>
+    </section>
+
+    <section class="feature-band" id="method">
+      <div class="section-wrap feature-grid">
+        <div><div class="section-kicker light-kicker">منهجية الموسوعة <span>03</span></div><h2>معلومة واضحة،<br><em>ومصدر يمكن الرجوع إليه.</em></h2></div>
+        <div class="feature-list">
+          <article><span>01</span><div><strong>التاريخ والنشأة</strong><p>عرض تاريخ المكان وتطور الاستقرار فيه، مع توضيح درجة توثيق الروايات.</p></div></article>
+          <article><span>02</span><div><strong>الجغرافيا والطبيعة</strong><p>الموقع والتضاريس والمناخ والبيئة المحيطة.</p></div></article>
+          <article><span>03</span><div><strong>التراث والحياة</strong><p>المعالم والعادات والحرف والأنشطة الاقتصادية والاجتماعية.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing section-wrap">
+      <div class="closing-seal">✳</div>
+      <p>ليبيا واسعة بتنوّعها، غنية بذاكرتها</p>
+      <h2>نحفظ حكاية المكان<br>لتبقى للأجيال.</h2>
+      <a class="button button-dark" href="#cities">تصفّح الدليل <span>←</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand"><span class="brand-mark">ل</span><div><strong>موسوعة المدن الليبية</strong><small>إعداد المهندس محمد عبدالمجيد حمودة</small></div></div>
+    <p>مشروع معرفي للتعريف بمدن وقرى ليبيا وتوثيق تاريخها وتراثها.</p>
+    <span class="copyright">© <span id="year"></span> موسوعة المدن الليبية</span>
+  </footer>
+
+  <dialog class="city-dialog" id="cityDialog">
+    <button class="dialog-close" id="dialogClose" aria-label="إغلاق">×</button>
+    <div id="dialogContent"></div>
+  </dialog>
+  <script src="cities.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
