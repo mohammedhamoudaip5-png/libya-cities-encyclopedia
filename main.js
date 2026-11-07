@@ -1,17 +1,19 @@
-// تحميل وتنسيق بطاقات المدن الـ 21 مباشرة
 document.addEventListener('DOMContentLoaded', () => {
-    // جلب البيانات من ملف cities.json الموجود في نفس المجلد
     fetch('cities.json')
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) throw new Error('فشل تحميل ملف بيانات المدن');
+            return response.json();
+        })
         .then(cities => {
             const grid = document.getElementById('cities-grid');
-            if(!grid) return;
+            if (!grid) return;
             grid.innerHTML = '';
+            
             cities.forEach(city => {
                 let extraNote = '';
-                if(city.id === 'mizda') {
+                if (city.id === 'mizda') {
                     extraNote = '<div class="image-note">🖼️ الصورة المعتمدة: صورة مزدة القديمة</div>';
-                } else if(city.id === 'rajban') {
+                } else if (city.id === 'rajban') {
                     extraNote = '<div class="image-note">🖼️ الصورة المعتمدة: صورة الرجبان البانورامية الثانية العريضة</div>';
                 }
 
@@ -30,5 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 grid.appendChild(card);
             });
         })
-        .catch(err => console.error('خطأ في تحميل بيانات المدن:', err));
+        .catch(err => {
+            console.error('خطأ:', err);
+            const grid = document.getElementById('cities-grid');
+            if (grid) {
+                grid.innerHTML = '<p style="color: red; text-align: center; grid-column: 1/-1;">عذراً، حدث خطأ في تحميل بيانات المدن. تأكد من وجود ملف cities.json.</p>';
+            }
+        });
 });
