@@ -1,9 +1,11 @@
-// تحميل وتنسيق بطاقات المدن الـ 21
+// تحميل وتنسيق بطاقات المدن الـ 21 مباشرة
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('data/cities.json')
+    // جلب البيانات من ملف cities.json الموجود في نفس المجلد
+    fetch('cities.json')
         .then(response => response.json())
         .then(cities => {
             const grid = document.getElementById('cities-grid');
+            if(!grid) return;
             grid.innerHTML = '';
             cities.forEach(city => {
                 let extraNote = '';
@@ -28,5 +30,5 @@ document.addEventListener('DOMContentLoaded', () => {
                 grid.appendChild(card);
             });
         })
-        .catch(err => console.error('خطأ في تحميل البيانات:', err));
+        .catch(err => console.error('خطأ في تحميل بيانات المدن:', err));
 });
