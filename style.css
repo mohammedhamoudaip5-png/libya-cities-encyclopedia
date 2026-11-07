@@ -1,130 +1,114 @@
-/* موسوعة المدن الليبية - التنسيق الشامل للموقع */
-:root {
-    --primary-color: #1a4a38;
-    --accent-color: #c59b27;
-    --bg-light: #f4f6f5;
-    --card-bg: #ffffff;
-    --text-dark: #2c3e50;
-    --border-color: #e0e0e0;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--bg-light);
-    color: var(--text-dark);
+    background-color: #f4f6f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
     direction: rtl;
-    line-height: 1.6;
+    text-align: right;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-.main-header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 40px 0;
+header {
     text-align: center;
-    border-bottom: 5px solid var(--accent-color);
-}
-
-.main-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.tagline {
-    color: var(--accent-color);
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
-.info-banner {
-    background: white;
-    padding: 20px 25px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 15px;
+    background: #fff;
+    padding: 20px;
     border-radius: 8px;
-    margin: 30px 0;
-    border-right: 6px solid var(--primary-color);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-.section-title {
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    margin-bottom: 25px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid var(--border-color);
+header h1 {
+    color: #1a365d;
+    margin-bottom: 5px;
 }
 
-.grid-container {
+.version {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.welcome-section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.cities-section h3 {
+    border-right: 4px solid #0056b3;
+    padding-right: 10px;
+    margin-bottom: 20px;
+    color: #1a365d;
+}
+
+.cities-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 25px;
-    margin-bottom: 50px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
 }
 
 .city-card {
-    background: var(--card-bg);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid var(--border-color);
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+    padding: 20px;
+    transition: transform 0.2s;
+    border-top: 4px solid #0056b3;
 }
 
 .city-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transform: translateY(-4px);
 }
 
 .city-card-header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
 }
 
 .city-card-header h4 {
-    font-size: 1.3rem;
+    margin: 0;
+    color: #0056b3;
+    font-size: 1.2rem;
 }
 
 .city-region {
-    background: var(--accent-color);
-    color: #000;
-    font-size: 0.85rem;
+    background: #eef2f7;
+    color: #333;
     padding: 3px 8px;
     border-radius: 4px;
-    font-weight: bold;
+    font-size: 0.8rem;
 }
 
-.city-card-body {
-    padding: 20px;
+.city-card-body p {
+    margin: 0 0 10px 0;
+    line-height: 1.6;
+    font-size: 0.95rem;
 }
 
 .image-note {
-    font-size: 0.85rem;
-    color: #666;
-    background: #f9f9f9;
-    padding: 8px;
+    background: #fff8e1;
+    color: #856404;
+    padding: 6px 10px;
     border-radius: 4px;
+    font-size: 0.85rem;
     margin-top: 10px;
-    border-right: 3px solid var(--accent-color);
+    border: 1px solid #ffeeba;
 }
 
 footer {
-    background-color: #111;
-    color: #aaa;
     text-align: center;
-    padding: 25px 0;
-    margin-top: 40px;
+    margin-top: 50px;
+    padding: 20px;
+    color: #666;
+    border-top: 1px solid #ddd;
+    font-size: 0.9rem;
+    background: #fff;
+    border-radius: 8px;
 }
