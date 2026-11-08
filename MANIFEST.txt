@@ -1,0 +1,13 @@
+محتويات الحزمة والأحجام بالبايت
+MANIFEST.txt	232
+PENDING-ASSETS-AR.txt	3559
+README-AR.txt	3047
+app.js	19295
+cities.js	267247
+data/libyan_cities_images_db.json	36967
+images/homepage-saraya-mizda.jpg	787294
+images/mizdah-old.jpg	249032
+images/rajban-panorama.png	3914949
+index.html	4748
+styles.css	12554
+اقرأ-قبل-الرفع.txt	1608
