@@ -44,3 +44,13 @@ body.dark{background:#18221a;color:#e8e4d7}body.dark .cities,body.dark .food-ind
 .food-card b{color:#53642e}.food-card p{font-size:14px;line-height:1.8;color:#5c5e52}
 .food-card button{border:0;background:#536735;color:#fff;padding:8px 12px;border-radius:8px;cursor:pointer;font:inherit}
 body.dark .food-card{background:#273328;border-color:#4c5b45}body.dark .food-card p{color:#d0d3c7}
+
+/* تحديث الواجهة: العلم الليبي وشاشة البداية */
+.homepage-flag{width:clamp(78px,10vw,132px);height:auto;object-fit:contain;display:block;border-radius:5px;filter:drop-shadow(0 3px 8px #0005);position:absolute;top:18px;right:22px;z-index:5}
+.site-splash{position:fixed;inset:0;z-index:99999;background:#f7f5ef;color:#17382e;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;transition:opacity .65s,visibility .65s}
+.site-splash.hide{opacity:0;visibility:hidden;pointer-events:none}
+.site-splash .splash-mark{font-size:3rem}
+.site-splash h2{font-size:clamp(1.4rem,4vw,2.2rem);margin:0}
+.site-splash p{margin:0;color:#7b6b50}
+.site-splash span{width:58px;height:3px;background:#c49a5d;border-radius:5px;margin-top:8px}
+@media(max-width:700px){.homepage-flag{width:76px;top:12px;right:12px}}

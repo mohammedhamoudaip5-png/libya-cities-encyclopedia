@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#34451f"><meta name="description" content="موسوعة المدن الليبية - إعداد المهندس محمد عبدالمجيد حمودة"><title>موسوعة المدن الليبية | إعداد المهندس محمد عبدالمجيد حمودة</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head>
 <body>
+<div id="siteSplash" class="site-splash"><div class="splash-mark">🇱🇾</div><h2>موسوعة المدن الليبية</h2><p>إعداد المهندس محمد عبدالمجيد حمودة</p><span></span></div>
 <header class="hero" id="home">
 <div class="hero-shade"></div>
 <button id="menuToggle" class="menu menu-left" aria-expanded="false" aria-label="القائمة">☰</button>
-<div class="flag-pole" aria-label="علم ليبيا"><div class="libya-flag"><i></i><i></i><i></i></div></div>
+<img class="homepage-flag" src="images/flag.jpg" alt="علم ليبيا مرفوع على سارية">
 <nav id="navLinks" class="menu-panel" aria-hidden="true">
 <button id="languageToggle" type="button">English / العربية</button>
 <a href="#cities">فهرس المدن</a><a href="#food">الأكلات الشعبية</a><button id="themeToggle" type="button">الوضع الداكن / العادي</button><a href="#about">حول الموسوعة</a>
@@ -21,10 +22,11 @@
 <div class="hero-banner wrap"><img src="images/homepage-saraya-mizda.jpg" alt="قلعة السرايا الحمراء وآثار مزدة القديمة"></div>
 <div class="hero-caption wrap"><b>قلعة السرايا الحمراء • آثار مزدة القديمة</b><span>ذاكرة المكان وامتداد التاريخ</span></div>
 </header>
-<main><section class="wrap cities" id="cities"><div class="heading"><div><small>رحلة في أرجاء البلاد</small><h2>فهرس المدن الليبية</h2><p>اختر المدينة لفتح ملفها التعريفي.</p></div><strong id="cityCount">30 مدينة</strong></div><div id="cityGrid" class="grid"></div><p id="emptyState" hidden>لم نعثر على مدينة بهذا الاسم.</p></section>
+<main><section class="wrap cities" id="cities"><div class="heading"><div><small>رحلة في أرجاء البلاد</small><h2>فهرس المدن الليبية</h2><p>اختر المدينة لفتح ملفها التعريفي.</p></div><strong id="cityCount">20 مدينة</strong></div><div id="cityGrid" class="grid"></div><p id="emptyState" hidden>لم نعثر على مدينة بهذا الاسم.</p></section>
 <section class="wrap food-index" id="food"><small>من ذاكرة المائدة الليبية</small><h2>الأكلات الشعبية للمدن</h2><p>مختارات من الأكلات التي أدرجها صاحب الموسوعة لكل مدينة.</p><div id="foodGrid" class="food-grid"></div></section>
 <section id="map" class="map"><div class="wrap"><small>من الساحل إلى عمق الصحراء</small><h2>مواقع المدن الليبية</h2><p>تتضمن صفحة كل مدينة رابطاً لفتح إحداثياتها على Google Earth/Maps. الإحداثيات تقريبية لمراكز المدن وتحتاج إلى تدقيق جغرافي عند الضرورة.</p></div></section>
 <section id="about" class="wrap about"><small>حول الموسوعة</small><h2>ذاكرة المدن... ذاكرة ليبيا</h2><p>تهدف الموسوعة إلى نقل تاريخ ليبيا ومدنها وتراثها إلى العالم، ليطلع عليها الناس من مختلف البلدان. إعداد وتصميم المهندس محمد عبدالمجيد محمد حمودة، آملاً أن تنال الموسوعة إعجاب زوارها وأن تكون نافذة للتعريف بتاريخ الوطن وهويته.</p></section></main>
 <footer><div class="wrap foot"><div><b>موسوعة المدن الليبية</b><p>© جميع الحقوق محفوظة</p></div><div class="social"><a href="https://wa.me/218923997237" target="_blank" rel="noopener">واتساب</a><a href="https://www.facebook.com/share/1A4JHAgRW4/?mibextid=wwXIfr" target="_blank" rel="noopener">فيسبوك</a></div><p class="prepared">إعداد المهندس محمد عبدالمجيد حمودة</p></div></footer>
 <dialog id="cityDialog"><button id="dialogClose" class="close">×</button><div id="dialogContent"></div></dialog>
+<script>window.addEventListener("load",()=>{const s=document.getElementById("siteSplash");if(s){setTimeout(()=>s.classList.add("hide"),700);setTimeout(()=>s.remove(),1500)}});</script>
 <script src="cities.js"></script><script src="app.js"></script></body></html>
